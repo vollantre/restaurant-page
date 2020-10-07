@@ -1,0 +1,26 @@
+html, body, #content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  overflow: auto;
+}
+body {
+  padding: 1rem;
+  overflow: auto;
+  background: linear-gradient(180deg, rgba(238,234,167,1) 53%, rgba(232,180,60,1) 100%);
+  color: #787975;
+}
+
+#header {
+  text-align: center;
+  font-family: monospace;
+  font-size: 25px;
+  color: #787975;
+}
