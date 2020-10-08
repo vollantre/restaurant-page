@@ -23,21 +23,36 @@ body {
   font-size: 35px;
   color: #787975;
 }
+#header > h1 {
+  margin-bottom: 15px;
+}
 #content {
-  margin-top: 30px;
+  margin: 30px auto;
+  height: auto;
+}
+#content > h1 {
+  font-size: 40px;
 }
 h1 {
   margin: 0;
-  margin-bottom: 15px;
+  text-align: center;
 }
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#home-content > p {
   width: 50%;
+  text-align: center;
+  margin: auto;
+  font-size: initial;
+  padding: 10px;
+}
+#image-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+#image-row > img {
+  width: 30%;
   border-radius: 50px;
 }
-
 /**
  * Tabs object.
  *

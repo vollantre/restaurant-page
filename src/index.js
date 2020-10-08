@@ -19,24 +19,31 @@ tabs.setAttribute("class", "tabs primary-nav")
 
 const pages = [
   {
-    tabLabel: "Home",
+    label: "Home",
     renderContent: renderHomePage
   },
   {
-    tabLabel: "Menu",
+    label: "Menu",
     renderContent: renderMenuPage
   },
   {
-    tabLabel: "Contact",
+    label: "Contact",
     renderContent: renderContactPage
   }
 ];
+
 pages.forEach((page) => {
   //create li
   const li = document.createElement('li');
   li.setAttribute("class", "tabs-item");
   li.addEventListener('click', () => {
-    document.getElementById('content').innerHTML = '';
+    const content = document.getElementById('content');
+    content.innerHTML = '';
+
+    const pageTitle = document.createElement('h1');
+    pageTitle.innerText = page.label;
+
+    content.appendChild(pageTitle);
     page.renderContent();
   });
 
@@ -44,20 +51,15 @@ pages.forEach((page) => {
   const a = document.createElement('a');
   a.setAttribute("href", "#");
   a.setAttribute("class", "tabs-link");
-  a.innerText = page.tabLabel;
+  a.innerText = page.label;
 
   //append
   li.appendChild(a);
   tabs.appendChild(li);
 })
 
-//create image
-const image = document.createElement('img')
-image.src = '../public/patacones.jpg';
-
 //append elements to body
 document.body.insertBefore(tabs, document.body.childNodes[0]);
 document.body.insertBefore(header, document.body.childNodes[0]);
 
 const content = document.querySelector('#content');
-content.appendChild(image);
