@@ -1,3 +1,7 @@
+import renderHomePage from './Home';
+import renderMenuPage from './Menu';
+import renderContactPage from './Contact'
+
 //create header element
 const header = document.createElement('header');
 header.setAttribute("id", "header");
@@ -13,17 +17,34 @@ header.appendChild(h1);
 const tabs = document.createElement('ul');
 tabs.setAttribute("class", "tabs primary-nav")
 
-const tabLabels = ["Home", "Menu", "Contact"];
-tabLabels.forEach((label) => {
+const pages = [
+  {
+    tabLabel: "Home",
+    renderContent: renderHomePage
+  },
+  {
+    tabLabel: "Menu",
+    renderContent: renderMenuPage
+  },
+  {
+    tabLabel: "Contact",
+    renderContent: renderContactPage
+  }
+];
+pages.forEach((page) => {
   //create li
   const li = document.createElement('li');
   li.setAttribute("class", "tabs-item");
+  li.addEventListener('click', () => {
+    document.getElementById('content').innerHTML = '';
+    page.renderContent();
+  });
 
   //create anchor
   const a = document.createElement('a');
   a.setAttribute("href", "#");
   a.setAttribute("class", "tabs-link");
-  a.innerText = label;
+  a.innerText = page.tabLabel;
 
   //append
   li.appendChild(a);
