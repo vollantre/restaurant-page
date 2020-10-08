@@ -13,7 +13,6 @@ html {
   font-family: monospace;
 }
 body {
-  padding: 1rem;
   overflow: auto;
   background: linear-gradient(180deg, rgba(238,234,167,1) 53%, rgba(232,180,60,1) 100%);
   color: #787975;
@@ -22,12 +21,10 @@ body {
   text-align: center;
   font-size: 35px;
   color: #787975;
-}
-#header > h1 {
-  margin-bottom: 15px;
+  margin-top: 20px;
 }
 #content {
-  margin: 30px auto;
+  margin: 20px auto;
   height: auto;
 }
 #content > h1 {
@@ -48,6 +45,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
+  padding: 1rem 2rem;
 }
 #image-row > img {
   width: 30%;

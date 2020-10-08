@@ -7,11 +7,12 @@ const header = document.createElement('header');
 header.setAttribute("id", "header");
 
 //create h1 element for header
-const h1 = document.createElement('h1');
-h1.innerText = 'Patacon!';
+const logo = document.createElement('img');
+logo.src = '../public/pataconia.png';
+logo.style.height = "200px";
 
 //append h1 to header
-header.appendChild(h1);
+header.appendChild(logo);
 
 //create tab list
 const tabs = document.createElement('ul');
@@ -59,7 +60,5 @@ pages.forEach((page) => {
 })
 
 //append elements to body
-document.body.insertBefore(tabs, document.body.childNodes[0]);
 document.body.insertBefore(header, document.body.childNodes[0]);
-
-const content = document.querySelector('#content');
+document.body.insertBefore(tabs, document.body.childNodes[0]);
