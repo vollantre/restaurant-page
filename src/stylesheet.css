@@ -26,20 +26,23 @@ body {
 #content {
   margin: 20px auto;
   height: auto;
+  text-align: center;
 }
 #content > h1 {
   font-size: 40px;
-}
-h1 {
-  margin: 0;
-  text-align: center;
+  text-transform: capitalize;
 }
 #home-content > p {
   width: 50%;
-  text-align: center;
   margin: auto;
-  font-size: initial;
   padding: 10px;
+  text-align: center;
+}
+p {
+  font-size: initial;
+}
+h2 {
+  font-size: 25px;
 }
 #image-row {
   display: flex;
@@ -73,6 +76,7 @@ h1 {
 }
 .tabs-link {
     display: block; /* [5] */
+    text-transform: capitalize;
 }
 
 
