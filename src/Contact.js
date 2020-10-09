@@ -20,8 +20,9 @@ export default () => {
   phone.appendChild(phoneHeader);
   phone.appendChild(phoneText);
 
+  contactContent.appendChild(address);
+  contactContent.appendChild(phone);
+
   //append to #content
-  const content = document.getElementById('content');
-  content.appendChild(address);
-  content.appendChild(phone);
+  document.getElementById('content').appendChild(contactContent);
 };

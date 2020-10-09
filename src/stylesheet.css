@@ -23,7 +23,6 @@ body {
 }
 #header {
   text-align: center;
-  font-size: 35px;
   margin-top: 20px;
 }
 #content {
@@ -32,31 +31,39 @@ body {
   text-align: center;
 }
 #content > h1 {
-  font-size: 40px;
+  font-size: 80px;
   text-transform: capitalize;
 }
 #home-content > p {
-  width: 50%;
+  width: 55%;
   margin: auto;
-  padding: 10px;
-  text-align: center;
+}
+#contact-content, #home-content {
+  font-style: italic;
 }
 p {
-  font-size: initial;
+  font-size: 20px;
 }
 h2 {
-  font-size: 25px;
+  font-size: 35px;
 }
-#image-row {
-  display: flex;
-  justify-content: space-between;
+#menu-list {
+  text-align: start;
   margin: 20px auto;
   padding: 1rem 2rem;
 }
-#image-row > img {
-  width: 30%;
-  border-radius: 50px;
+img {
+  border-radius: 35px;
+  width: 350px;
 }
+.menu-item {
+  display: flex;
+  margin-top: 15px;
+  height: 270px;
+  align-items: center;
+}
+
+
 /**
  * Tabs object.
  *
