@@ -3,7 +3,7 @@ export default () => {
   homeContent.id = "home-content";
 
   const p = document.createElement('p');
-  p.innerText = "Are you Venezuelan and do you want to feel at home? come and delight yourself with our best dishes. Welcome to Pataconia restaurant, a restaurant that offers the tastiest Venezuelan dishes in the city.";
+  p.innerText = "Are you Venezuelan and do you want to feel at home? come and delight yourself with our best dishes. Welcome to Pataconia restaurant, a restaurant that offers the tastiest Venezuelan🇻🇪 dishes (patacones, arepas, cachapas, etc) in the city. ";
   homeContent.appendChild(p);
 
   //insert images
