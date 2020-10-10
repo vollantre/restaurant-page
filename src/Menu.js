@@ -31,7 +31,7 @@ export default () => {
   //insert images
   menu.forEach(dish => {
     const img = document.createElement('img');
-    img.src = `../public/${dish.filename}`;
+    img.src = `./public/${dish.filename}`;
 
     const item = document.createElement('div');
     item.setAttribute("class", "menu-item");

@@ -55,7 +55,7 @@ header.setAttribute("id", "header");
 
 //create h1 element for header
 const logo = document.createElement('img');
-logo.src = '../public/pataconia.png';
+logo.src = './public/pataconia.png';
 logo.style.height = "200px";
 
 //append h1 to header
