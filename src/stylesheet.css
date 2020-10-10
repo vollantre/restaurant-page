@@ -48,7 +48,6 @@ h2 {
   font-size: 35px;
 }
 #menu-list {
-  text-align: start;
   margin: 20px auto;
   padding: 1rem 2rem;
 }
@@ -59,10 +58,33 @@ img {
 .menu-item {
   display: flex;
   margin-top: 15px;
-  height: 270px;
   align-items: center;
+  border-top: 1px solid #ffffff73;
+  padding: 30px 20px;
+  position: relative;
 }
 
+.menu-item > div {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 30px;
+  left: 400px;
+  top: 30px;
+}
+
+.price {
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-top: 0;
+}
 
 /**
  * Tabs object.
