@@ -1,0 +1,135 @@
+html, body, #content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  overflow: auto;
+  font-family: monospace;
+}
+body {
+  overflow: auto;
+  /*background: linear-gradient(180deg, rgba(238,234,167,1) 53%, rgba(232,180,60,1) 100%);*/
+  color:white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/patacones.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#header {
+  text-align: center;
+  margin-top: 20px;
+}
+#content {
+  margin: 20px auto;
+  height: auto;
+  text-align: center;
+}
+#content > h1 {
+  font-size: 80px;
+  text-transform: capitalize;
+}
+#home-content > p {
+  width: 55%;
+  margin: auto;
+}
+#contact-content, #home-content {
+  font-style: italic;
+}
+p {
+  font-size: 20px;
+}
+h2 {
+  font-size: 35px;
+}
+#menu-list {
+  margin: 20px auto;
+  padding: 1rem 2rem;
+}
+img {
+  border-radius: 35px;
+  width: 350px;
+}
+.menu-item {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  border-top: 1px solid #ffffff73;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.menu-item > div {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 30px;
+  left: 400px;
+  top: 30px;
+}
+
+.price {
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-top: 0;
+}
+
+/**
+ * Tabs object.
+ *
+ * 1. Tables (kinda) for layout!
+ * 2. This is the magic bit; make all children occupy equal width.
+ * 3. Required to make the tabs fill their container.
+ * 4. Make each tab pack up horizontally.
+ * 5. Ensure the hit area covers the whole tab.
+ */
+.tabs {
+  margin:  0;
+  padding: 0;
+  list-style: none;
+  display: table; /* [1] */
+  table-layout: fixed; /* [2] */
+  width: 100%; /* [3] */
+}
+.tabs-item {
+    display: table-cell; /* [4] */
+}
+.tabs-link {
+    display: block; /* [5] */
+    text-transform: capitalize;
+}
+
+
+/**
+* Primary nav. Extends `.tabs`.
+*
+* 1. Stop tabs’ corners leaking out beyond our 4px round.
+*/
+.primary-nav {
+  text-align: center;
+  font-size: 15px;
+  border-radius: 4px;
+  overflow: hidden; /* [1] */
+}
+.primary-nav a {
+    padding: 1em;
+    background-color: #BADA55;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.primary-nav a:hover {
+    background-color: #A3C43B;
+}
