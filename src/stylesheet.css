@@ -58,16 +58,14 @@ h2 {
   align-items: center;
   border-top: 1px solid #ffffff73;
   padding: 30px 20px;
-  position: relative;
 }
 .menu-item > div {
   display: flex;
-  position: absolute;
   flex-direction: column;
   justify-content: space-between;
-  bottom: 30px;
-  left: 400px;
-  top: 30px;
+  align-self: baseline;
+  margin-left: 20px;
+  text-align: left;
 }
 .price {
   margin-bottom: 0;
@@ -76,7 +74,7 @@ h2 {
 }
 img {
   border-radius: 35px;
-  width: 350px;
+  max-width: 350px;
 }
 h3 {
   font-size: 30px;

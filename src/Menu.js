@@ -40,12 +40,18 @@ export default () => {
     const h3 = document.createElement('h3');
     h3.innerText = dish.name;
 
-    const div = document.createElement('div');
-    const price = document.createElement('p');
-    price.setAttribute("class", "price");
-    price.innerText = dish.price;
+    let div = document.createElement('div');
+    const description = document.createElement("p");
+    description.innerText = "A well-written, appetite inspiring description that aims to inform the information and food deprived consumer";
 
     div.appendChild(h3);
+    div.appendChild(description);
+    item.appendChild(div);
+
+    const price = document.createElement('h3');
+    price.innerText = dish.price;
+
+    div = document.createElement('div');
     div.appendChild(price);
     item.appendChild(div);
 
