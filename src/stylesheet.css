@@ -13,8 +13,9 @@ html {
   font-family: monospace;
 }
 body {
+  display: flex;
+  flex-direction: column;
   overflow: auto;
-  /*background: linear-gradient(180deg, rgba(238,234,167,1) 53%, rgba(232,180,60,1) 100%);*/
   color:white;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/patacones.jpg');
   background-repeat: no-repeat;
@@ -51,10 +52,6 @@ h2 {
   margin: 20px auto;
   padding: 1rem 2rem;
 }
-img {
-  border-radius: 35px;
-  width: 350px;
-}
 .menu-item {
   display: flex;
   margin-top: 15px;
@@ -63,7 +60,6 @@ img {
   padding: 30px 20px;
   position: relative;
 }
-
 .menu-item > div {
   display: flex;
   position: absolute;
@@ -73,19 +69,29 @@ img {
   left: 400px;
   top: 30px;
 }
-
 .price {
   margin-bottom: 0;
   text-align: left;
   font-size: 30px;
 }
-
+img {
+  border-radius: 35px;
+  width: 350px;
+}
 h3 {
   font-size: 30px;
   text-transform: capitalize;
   margin-top: 0;
 }
-
+h6 {
+  font-size: initial;
+  text-align: center;
+}
+footer{
+  background-color: #2e2f2f;
+  min-height: 100px;
+  margin-top: auto;
+}
 /**
  * Tabs object.
  *

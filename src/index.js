@@ -14,7 +14,8 @@ const renderPage = (page) => {
   page.renderContent();
 };
 
-//create tab list
+
+//Create tab list for body
 const tabs = document.createElement('ul');
 tabs.setAttribute("class", "tabs primary-nav");
 
@@ -52,7 +53,7 @@ pages.forEach((page) => {
 });
 
 
-//create header element
+//Create header element for body
 const header = document.createElement('header');
 header.setAttribute("id", "header");
 
@@ -64,9 +65,19 @@ logo.style.height = "200px";
 //append h1 to header
 header.appendChild(logo);
 
+
+//Create footer element for body
+const footer = document.createElement("footer");
+const h6 = document.createElement("h6");
+h6.innerText = "© Created by Vollantre.";
+
+footer.appendChild(h6);
+
+
 //append elements to body
 document.body.insertBefore(header, document.body.childNodes[0]);
 document.body.insertBefore(tabs, document.body.childNodes[0]);
+document.body.appendChild(footer);
 
 //render Home page
 renderPage(pages[0]);
