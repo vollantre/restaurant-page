@@ -1,6 +1,18 @@
 import renderHomePage from './Home';
 import renderMenuPage from './Menu';
-import renderContactPage from './Contact'
+import renderContactPage from './Contact';
+
+//render page funtion
+const renderPage = (page) => {
+  const content = document.getElementById('content');
+  content.innerHTML = '';
+
+  const pageTitle = document.createElement('h1');
+  pageTitle.innerText = page.label;
+
+  content.appendChild(pageTitle);
+  page.renderContent();
+};
 
 //create tab list
 const tabs = document.createElement('ul');
@@ -26,16 +38,7 @@ pages.forEach((page) => {
   const li = document.createElement('li');
   li.setAttribute("class", "tabs-item");
   li.id = `${page.label}-tab`;
-  li.addEventListener('click', () => {
-    const content = document.getElementById('content');
-    content.innerHTML = '';
-
-    const pageTitle = document.createElement('h1');
-    pageTitle.innerText = page.label;
-
-    content.appendChild(pageTitle);
-    page.renderContent();
-  });
+  li.addEventListener('click', () => renderPage(page));
 
   //create anchor
   const a = document.createElement('a');
@@ -66,4 +69,4 @@ document.body.insertBefore(header, document.body.childNodes[0]);
 document.body.insertBefore(tabs, document.body.childNodes[0]);
 
 //render Home page
-document.getElementById('home-tab').dispatchEvent(new Event("click"));
+renderPage(pages[0]);
